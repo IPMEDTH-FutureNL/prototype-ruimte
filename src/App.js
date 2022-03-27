@@ -1,10 +1,12 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
+
 import Intro from './components/gameplay/Intro';
 import Start from './components/gameplay/Start';
 import OvergangPuzzelEen from './components/gameplay/OvergangPuzzelEen';
 import DragAndDrop from './components/puzzels/DragAndDrop';
+import Ending from './components/gameplay/Ending';
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
           <Route path="/start" element={<Start></Start>} />
           <Route path='/firstPuzzle' element={<OvergangPuzzelEen />} />
           <Route path='/puzzleMap' element={ <DragAndDrop />} />
+          <Route path='/end' element={ <Ending />} />
         </Routes>
       </div>
     </Router>

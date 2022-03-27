@@ -2,6 +2,14 @@ import React, { Component } from 'react'
 import '../../css/intro.css';
 
 export class Intro extends Component {
+
+    componentDidMount = () => {
+        let start = new Date();
+        let minutes = start.getMinutes();
+        localStorage.setItem("userTime", minutes);
+        console.log(minutes);
+    }
+
   startWithEscape(){
     window.location.href="/start";
   }

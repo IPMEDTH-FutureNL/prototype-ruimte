@@ -7,8 +7,7 @@ import  Rechtsboven  from '../../img/PuzzelStukjes/Rechtsboven.png'
 import  Rechtsmidden  from '../../img/PuzzelStukjes/Rechtsmidden.png'
 import  Rechtsonder  from '../../img/PuzzelStukjes/Rechtsonder.png'
 import { FaInfoCircle } from "react-icons/fa";
-
-
+import { Link } from 'react-router-dom'
 
 export class DragAndDrop extends Component {
   constructor(props){
@@ -17,6 +16,11 @@ export class DragAndDrop extends Component {
       count : 0,
     }
 }
+
+
+
+
+
 
 hideOverLay(){
     let hideDiv = document.getElementById("overlay");
@@ -123,7 +127,7 @@ drop = (e) =>
           </div>
          
          <div className="buttonOlifanten" id="buttonOlifanten">
-           <button className="secondary">Ga naar het olifanten verblijf!</button>
+           <Link to="/end" className="secondary" >Ga naar het olifanten verblijf!</Link>
          </div>
       </section>
      
