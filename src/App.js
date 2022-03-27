@@ -11,24 +11,26 @@ import OplosmatrixIntro from './components/oplosmatrix/OplosmatrixIntro';
 import OplosmatrixLock from './components/oplosmatrix/OplosmatrixLock';
 import OplosmatrixNote from './components/oplosmatrix/OplosmatrixNotes';
 import OplosmatrixHint from './components/oplosmatrix/OplosmatrixHint';
+import Ending from './components/gameplay/Ending';
 
-function App() {
- return(
-   <Router>
-     <div className="App">
-      <Routes>
-        <Route path="/" element ={<Start></Start>} />
-        <Route path='/firstPuzzle' element={<OvergangPuzzelEen />} />
-        <Route path='/puzzleMap' element={ <DragAndDrop />} />
-        <Route path='/oplosmatrixIntro' element={<OplosmatrixIntro />}/> 
-        <Route path='/oplosmatrix' element ={<Oplosmatrix />} />
-        <Route path='/oplosmatrixSlot' element ={<OplosmatrixLock />} />
-        <Route path='/oplosmatrixHint' element ={<OplosmatrixHint />} />
-        <Route path='/oplosmatrixBrief' element ={<OplosmatrixNote />} />
-      </Routes>
-     </div>
-  </Router>
- )
+  function App() {
+   return(
+     <Router>
+       <div className="App">
+        <Routes>
+          <Route path="/" element ={<Start></Start>} />
+          <Route path='/firstPuzzle' element={<OvergangPuzzelEen />} />
+          <Route path='/puzzleMap' element={ <DragAndDrop />} />
+          <Route path='/oplosmatrixIntro' element={<OplosmatrixIntro />}/> 
+          <Route path='/oplosmatrix' element ={<Oplosmatrix />} />
+          <Route path='/oplosmatrixSlot' element ={<OplosmatrixLock />} />
+          <Route path='/oplosmatrixHint' element ={<OplosmatrixHint />} />
+          <Route path='/oplosmatrixBrief' element ={<OplosmatrixNote />} />
+          <Route path='/end' element={ <Ending />} />
+        </Routes>
+       </div>
+    </Router>
+   )
 }
 
 export default App;

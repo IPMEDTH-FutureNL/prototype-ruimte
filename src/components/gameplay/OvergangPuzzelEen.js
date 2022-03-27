@@ -3,6 +3,7 @@ import '../../css/puzzleOne.css';
 import zookeeperImage from '../../img/zookeeper.png'
 import textCloud from '../../img/textCloud.png'
 
+
 export class OvergangPuzzelEen extends Component {
   constructor(props){
       super(props);
@@ -35,7 +36,7 @@ export class OvergangPuzzelEen extends Component {
             this.setState({buttonText : "Pak kaart"});
             break;
           case 2:
-            window.location.href="/firstPuzzle";
+            window.location.href="/puzzleMap";
             break;
       }
     }
