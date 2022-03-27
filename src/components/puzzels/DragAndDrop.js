@@ -127,7 +127,7 @@ drop = (e) =>
           </div>
          
          <div className="buttonOlifanten" id="buttonOlifanten">
-           <Link to="/end" className="secondary" >Ga naar het olifanten verblijf!</Link>
+           <Link to="/elephantEntry" className="secondary" >Ga naar het olifanten verblijf!</Link>
          </div>
       </section>
      
