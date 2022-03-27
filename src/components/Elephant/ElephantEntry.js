@@ -7,6 +7,8 @@ import { useNavigate } from "react-router-dom";
 import elephantEntry from '../../img/elephantEntry.png'
 import lock from '../../img/lock.png'
 import arrowRight from '../../img/arrowRight.png'
+import arrowLeft from '../../img/arrowLeft.png'
+import arrowBottom from '../../img/arrowBottom.png'
 
 const ElephantEntry = () => {
 
@@ -41,10 +43,10 @@ const ElephantEntry = () => {
             <img className="elephant-entry" src={elephantEntry}/>
             <img className="lock" onClick={setModalIsOpenToTrue} src={lock}/>
             <img className="arrow-right" src={arrowRight} onClick={goRight}/>
-            <img className="arrow-left" src={arrowRight} onClick={goLeft}/>
-            <img className="arrow-bottom" src={arrowRight} onClick={goBack}/>
+            <img className="arrow-left" src={arrowLeft} onClick={goLeft}/>
+            <img className="arrow-bottom" src={arrowBottom} onClick={goBack}/>
 
-            <Modal isOpen={modalIsOpen}>
+            <Modal className="modal-lock" isOpen={modalIsOpen}>
                 <button onClick={setModalIsOpenToFalse}>x</button>
                 <ModalLock/>
             </Modal>

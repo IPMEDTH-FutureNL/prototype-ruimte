@@ -3,7 +3,7 @@ import scroll from '../../img/scroll.png'
 
 const ModalQuestions = () => {
   return (
-    <div>
+    <section>
       <img className="scroll" src={scroll}/>
       <section class="scroll-notes-text">
         <h2 class="text-white">Het slot zit wel erg goed op slot he?</h2>
@@ -28,7 +28,7 @@ const ModalQuestions = () => {
 
         <p class="text-white"> <em>Google is je beste vriend</em> </p>
       </section>
-    </div>
+    </section>
   )
 }
 

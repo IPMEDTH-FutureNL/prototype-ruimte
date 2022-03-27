@@ -42,11 +42,11 @@ const ElephantLeft = () => {
         <img className="arrow-right" src={arrowRight} onClick={goRight}/>
         <img className="scroll-notes" src={closedScroll} onClick={scrollNotes}/>
         <img className="scroll-questions" src={closedScroll} onClick={scrollQuestions}/>
-        <Modal isOpen={modalIsOpenQ}>
+        <Modal className="modal-questions" isOpen={modalIsOpenQ}>
             <button onClick={scrollQuestionsFalse}>x</button>
             <ModalQuestions/>
         </Modal>
-        <Modal isOpen={modalIsOpenN}>
+        <Modal className="modal-notes" isOpen={modalIsOpenN}>
             <button onClick={scrollNotesFalse}>x</button>
             <ModalNotes/>
         </Modal>
