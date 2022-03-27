@@ -6,8 +6,11 @@ import Start from './components/gameplay/Start';
 import OvergangPuzzelEen from './components/gameplay/OvergangPuzzelEen';
 import DragAndDrop from './components/puzzels/DragAndDrop';
 
-import OplosmatrixLock from './components/oplosmatrix/oplosmatrixLock';
-
+import Oplosmatrix from './components/oplosmatrix/Oplosmatrix';
+import OplosmatrixIntro from './components/oplosmatrix/OplosmatrixIntro';
+import OplosmatrixLock from './components/oplosmatrix/OplosmatrixLock';
+import OplosmatrixNote from './components/oplosmatrix/OplosmatrixNotes';
+import OplosmatrixHint from './components/oplosmatrix/OplosmatrixHint';
 
 function App() {
  return(
@@ -17,7 +20,11 @@ function App() {
         <Route path="/" element ={<Start></Start>} />
         <Route path='/firstPuzzle' element={<OvergangPuzzelEen />} />
         <Route path='/puzzleMap' element={ <DragAndDrop />} />
-        <Route path= '/oplosmatrix' element ={<OplosmatrixLock />} />
+        <Route path='/oplosmatrixIntro' element={<OplosmatrixIntro />}/> 
+        <Route path='/oplosmatrix' element ={<Oplosmatrix />} />
+        <Route path='/oplosmatrixSlot' element ={<OplosmatrixLock />} />
+        <Route path='/oplosmatrixHint' element ={<OplosmatrixHint />} />
+        <Route path='/oplosmatrixBrief' element ={<OplosmatrixNote />} />
       </Routes>
      </div>
   </Router>

@@ -1,6 +1,7 @@
 //zoom in on lock
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../../css/oplosmatrixLock.css';
 
 const OplosMatrixLock = () => {
     const navigate = useNavigate();
@@ -37,7 +38,7 @@ const OplosMatrixLock = () => {
     return(
         <section>
             <form onSubmit={solveLock}>
-                <label htmlFor='lname'>Weer een slot!? wat zou dit moeten zijn?</label>
+                {/* <label htmlFor='lname'>Weer een slot!? wat zou dit moeten zijn?</label> */}
                 <input className="number" index="1" type="number" min="0" max="9"></input>
                 <input className="number" index="1" type="number" min="0" max="9"></input>
                 <input className="number" index="1" type="number" min="0" max="9"></input>
