@@ -9,6 +9,7 @@ export class OplosmatrixHint extends Component{
         return(
             <section>
                 {/* img */}
+                <section>aaah</section>
             </section>
         )
     }
