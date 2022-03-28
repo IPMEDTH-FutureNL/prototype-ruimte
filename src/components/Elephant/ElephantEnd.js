@@ -1,14 +1,14 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 
-import elephantEnd from '../../img/elephantEnd.png'
+import ruimteschipBegin from '../../img/ruimteschipBegin.jpg'
 
 const ElephantEnd = () => {
 
     const navigate = useNavigate(); 
 
     const wrong = () => {
-        alert('Dat is niet de juiste voedsel!')
+        alert('Dat is niet de juiste manier!')
     }
 
     const right = () => {
@@ -17,13 +17,13 @@ const ElephantEnd = () => {
 
   return (
     <div className="background absolute">
-        <img className="elephant-end" src={elephantEnd}/>
+        <img className="elephant-end" src={ruimteschipBegin}/>
         <section className="elephant-food">
-            <h2>Leid de olifant af door hem wat te eten te geven</h2>
+            <h2>Goed je hebt de gegevens, schakel nu de computer van het ruimteschip uit</h2>
             <ul className="elephant-food-list">
-                <li className="elephant-food-listitem" onClick={wrong}>Vlees</li>
-                <li className="elephant-food-listitem" onClick={right}>Fruit</li>
-                <li className="elephant-food-listitem" onClick={wrong}>Chocola</li>
+                <li className="elephant-food-listitem" onClick={wrong}>Stekker eruit halen</li>
+                <li className="elephant-food-listitem" onClick={right}>Uit knop drukken</li>
+                <li className="elephant-food-listitem" onClick={wrong}>Scherm dichtklappen</li>
             </ul>
         </section>
     </div>
