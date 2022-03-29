@@ -1,7 +1,7 @@
 
 
-.introEscape{
-    background-image: url("../img/start.png");
+.introEscape-ending{
+    background-image: url("../img/end.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -26,5 +26,10 @@
     border-color: none;
     border: none;
     font-size: 20px;
-    margin-top: 50px;
+    margin-top: 80px;
+    text-decoration: none;
+}
+
+.p-text{
+    margin-bottom: 75px;
 }
