@@ -7,7 +7,7 @@ const ModalLock = () => {
 
     const checkValue = () => {
         const inputValue = document.getElementById("number").value;
-        if(inputValue == 817){
+        if(inputValue == 524){
             console.log('Code gekraakt!!!')   
             navigate("/elephantEnd")
 
@@ -22,6 +22,7 @@ const ModalLock = () => {
         <label className="modal-lock-section-label" htmlFor="lname">Oei, de computer heeft een wachtwoord. Wat zou de driecijferige code zijn?</label> <br/>
         <input className="modal-lock-section-el input" type="number" id="number" name="number"/> <br/>
         <button className="modal-lock-section-el btn" onClick={checkValue}> Kraak de code</button>
+        <p className="modal-lock-section-label text-red">Tip: Los de vragen op, die op een tablet ergens in dit verblijf geschreven zijn. Deze drie vragen vormen een code!</p>
     </section>
   )
 }

@@ -9,22 +9,24 @@ const ModalQuestions = () => {
         <h2 class="text-black">De code is wel erg lastig he?</h2>
 
         <p class="text-black">1. Hoeveel planeten heeft ons zonnestelsel?</p>
+        <ul class="text-black list">
+          <li>A. 4 </li>
+          <li>B. 8 </li>
+        </ul>
 
-        <p class="text-blue">2. Welke planeet is het kleinste in ons zonnestelsel?</p>
-        <ol class="text-blue">
+        <p class="text-black">2. Welke planeet is het kleinste in ons zonnestelsel?</p>
+        <ul class="text-black list">
           <li>A. Mercurius </li>
           <li>B. Venus </li>
           <li>C. Aarde </li>
-          <li>D. Mars </li>
-        </ol>
+        </ul>
 
-        <p class="text-red">3. Welke planeet is het verst van de zon?</p>
-        <ol class="text-red">
+        <p class="text-black">3. Welke planeet is het verst van de zon?</p>
+        <ul class="text-black list">
           <li>A. Saturnus</li>
           <li>B. Jupiter</li>
           <li>C. Neptunus</li>
-          <li>D. Uranus</li>
-        </ol>
+        </ul>
 
         <p class="text-black"> <em>Google is je beste vriend</em> </p>
       </section>

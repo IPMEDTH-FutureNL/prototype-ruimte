@@ -72,9 +72,13 @@ body{
     padding: 1rem;
     border-radius: 20px;
     width: 50vw;
-    height: 50vh;
+    height: 60vh;
     left: 50%;
-    transform: translate(50%, 50%);
+    transform: translate(50%, 35%);
+}
+
+.list{
+    list-style: none;
 }
 
 .modal-lock-section-label{
