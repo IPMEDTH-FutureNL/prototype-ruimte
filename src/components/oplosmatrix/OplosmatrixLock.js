@@ -14,6 +14,7 @@ const OplosMatrixLock = () => {
 
         if (codeString == answerLock){
             console.log('gefeliciteerd')
+            window.location.href = "/end";
             //navigate naar volgende pagina
         } else {
             console.log('jammer, probeer het nog maar een keer')
