@@ -8,27 +8,37 @@
 
 .containerLock{
     display:block;
-    margin: auto;
-    padding-top: 30vh;
-    width:20vh;
+    position:absolute;
+    top:15vh;
+    right: 15vw;
+
 }
 
 .containerForm{
-    width: 20vw;
-    height: 20vw;
-    background-color: rgb(231, 173, 12);
+    width: 70vw;
+    height: 50vh;
+    background-color:cyan;
+    border: 10px solid black;
 }
 
 .containerNumber{
-    padding-top: 50%;
+    padding-top: 20%;
+    height:20%
+}
+
+.ufo-lock,.planet-lock,.rocket-lock{
+    width:3rem;
+    height:auto;
+    padding: 10px;
+    margin: 0 2%;
 }
 
 .number{
     -webkit-appearance: none;
     margin: 0 2%;
-    width: 15%;
+    width: 3rem;
     padding: 10px;
-    height: auto;
+    height: 3rem;
     border-radius: 6px;
 }
 

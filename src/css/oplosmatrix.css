@@ -1,5 +1,5 @@
 .oplosmatrix{
-    background-image: url(../img/barn.png);
+    background-image: url('../img/951.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -7,26 +7,25 @@
 
 }
 
-.lock{
-    width:4rem;
-    height: 4rem;
+.clickable-note{
+    width:50vw;
+    height: 30vh;
+    border: 5px solid red;
+    background-color: cyan;
+    opacity:50%;
     position: absolute;
-    top:60vh;
-    right:48vw;
+    top:30vh;
+    right:28vw;
 }
 
-.hintpaper{
-    width:5rem;
-    height:5rem;
-    position: absolute;
-    top:25vh;
-    right:30vw;
-}
 
-.notepaper{
-    width:5rem;
-    height:5rem;
+.clickable-lock{
+    width:15vw;
+    height:7vw;
+    border: 5px solid black;
+    background-color: chartreuse;
+    opacity:70%;
     position: absolute;
-    top:60vh;
-    left:20vw;
+    top:59vh;
+    left:41vw;
 }

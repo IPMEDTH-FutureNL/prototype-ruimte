@@ -1,9 +1,9 @@
 //oplosmatrix puzzel
 import React, { Component } from 'react';
 import '../../css/oplosmatrixNotes.css';
-import elephantIcon from'../../img/elephantIcon.png';
-import tigerIcon from'../../img/tigerIcon.png';
-import monkeyIcon from'../../img/monkeyIcon.png';
+import elephantIcon from'../../img/planet.png';
+import tigerIcon from'../../img/rocket.png';
+import monkeyIcon from'../../img/ufo.png';
 
 export class OplosmatrixNotes extends Component{
 
@@ -16,31 +16,7 @@ export class OplosmatrixNotes extends Component{
             <section className='note'>
                 <section className='note-center'>
                     <div className='oplosmatrix-grid'>
-                        <div className='grid-item-blank'></div>
-                        <div className='grid-item-img'>
-                            <img className='icon' src={elephantIcon}></img>
-                        </div>
-                        <div className='grid-item-img'>
-                            <img className='icon' src={tigerIcon}></img>
-                        </div>
-                        <div className='grid-item-img'>
-                            <img className='icon' src={monkeyIcon}></img>
-                        </div>
-
-                        <div className='grid-item-color-red'/>
-                        <div className='grid-item-number'>1</div>
-                        <div className='grid-item-number'>7</div>
-                        <div className='grid-item-number'>5</div>
-
-                        <div className='grid-item-color-blue'/>
-                        <div className='grid-item-number'>6</div>
-                        <div className='grid-item-number'>3</div>
-                        <div className='grid-item-number'>9</div>
-
-                        <div className='grid-item-color-yellow'/>
-                        <div className='grid-item-number'>2</div>
-                        <div className='grid-item-number'>8</div>
-                        <div className='grid-item-number'>4</div>
+                        
 
                     </div>
                 </section>
