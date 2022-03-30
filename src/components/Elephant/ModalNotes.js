@@ -1,9 +1,11 @@
 import React from 'react'
 import tablet from '../../img/tablet.png'
 
+
 const ModalNotes = () => {
   return (
     <section>
+
       <img className="scroll" src={tablet}/>
       <h2 class="scroll-notes-text"> Zet de antwoorden van vraag 2 en 3 hiermee om!</h2>
       <p class="scroll-notes-text">A = <span class="text-blue">1 + 1 </span> </p>

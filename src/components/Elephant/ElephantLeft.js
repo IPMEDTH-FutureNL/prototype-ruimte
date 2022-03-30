@@ -6,7 +6,8 @@ import ruimteschipLinks from '../../img/ruimteschipLinks.jpg'
 import arrowRight from '../../img/arrowRight.png'
 import tablet from '../../img/tablet.png'
 import { useNavigate } from "react-router-dom";
-import { tab } from '@testing-library/user-event/dist/tab';
+//import { tab } from '@testing-library/user-event/dist/tab';
+
 
 const ElephantLeft = () => {
 

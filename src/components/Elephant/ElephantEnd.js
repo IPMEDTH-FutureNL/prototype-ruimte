@@ -1,18 +1,22 @@
 import React from 'react'
 import { useNavigate } from "react-router-dom";
 
+
 import ruimteschipBegin from '../../img/ruimteschipBegin.jpg'
+
 
 const ElephantEnd = () => {
 
     const navigate = useNavigate(); 
 
     const wrong = () => {
-        alert('Dat is niet de juiste manier om een computer uit te schakelen!')
+
+        alert('Dat is niet de juiste voedsel!')
     }
 
     const right = () => {
         navigate("/oplosmatrixIntro") 
+
     }
 
   return (

@@ -16,6 +16,7 @@ body{
     top: 50vh;
     left: 25vh;
 }
+
 .absolute{
     position: absolute;
 }
@@ -118,10 +119,10 @@ body{
 .scroll-questions{
     width: 4vw;
     position: relative;
-    top: 80vh;
+    top: 85vh;
     left: 40vw;
-    transform: rotate(50deg);
 }
+
 
 .scroll-notes{
     width: 3vw;
@@ -142,6 +143,7 @@ body{
     z-index: 3;
     left: 5vw;
     top: 12vh;
+
     font-size: 1.25rem;
     font-weight: bold;
 }
