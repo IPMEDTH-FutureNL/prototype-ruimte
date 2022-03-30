@@ -133,6 +133,7 @@ showButton(){
             <img id="drag4"  data-div="div2" src={Selecteren} draggable="true" onDragStart={(event) => this.drag(event)}/>
           </div>
          
+
           <div className="hideSolution" id="Puzzel-voldaan">
                 <div className="solutionDiv" id="solutionDiv">
                     <h1 className="headerOne-voldaan">

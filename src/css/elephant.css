@@ -1,0 +1,161 @@
+body{
+    overflow: hidden;
+}
+.elephant-entry, .elephant-end, .elephant-right, .elephant-left{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    width: 100vw; 
+    position: absolute;
+    left:0;
+}
+
+.lock{
+    width: 5vw;
+    position: relative;
+    top: 50vh;
+    left: 25vh;
+}
+.absolute{
+    position: absolute;
+}
+
+.elephant-food{
+    position:relative;
+    background-color: white;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    border-radius: 20px;
+    top: 30vh;
+    left: 30vw;
+}
+
+.elephant-food-listitem{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.elephant-food-listitem:hover{
+    background-color: rgb(255, 116, 116);
+}
+
+.elephant-food-list{
+    list-style: none;
+    padding: 0;
+}
+
+.arrow-right, .arrow-left, .arrow-bottom{
+    position: relative;
+    width: 8vw;
+}
+
+.arrow-right{
+    top: 50vh;
+    left: 45vw;
+}
+
+.arrow-left{
+    top: 50vh;
+    right: 45vw;
+}
+
+.arrow-bottom{
+    width: 6vw;
+    top: 70vh;
+    right: 15vw;
+}
+
+.modal-lock{
+    background-color: white;
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    border-radius: 20px;
+    width: 50vw;
+    height: 50vh;
+    left: 50%;
+    transform: translate(50%, 50%);
+}
+
+.modal-lock-section-label{
+    font-size: 1.5rem;
+    text-align: center;
+    padding-left: 4rem;
+}
+
+.modal-lock-section-el{
+    display: block;
+	margin: 1rem auto;
+	width: 50%;
+    padding: 1rem;
+    border-color: red;
+}
+
+.input{
+    font-size: 2rem;
+}
+
+.btn{
+    background-color: darkred;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-notes, .modal-questions{
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 40vw;
+    height: 50vh;
+    left: 50%;
+    transform: translate(75%, 0%);
+}
+
+.scroll-questions{
+    width: 4vw;
+    position: relative;
+    top: 80vh;
+    left: 40vw;
+    transform: rotate(50deg);
+}
+
+.scroll-notes{
+    width: 3vw;
+    position: relative;
+    top: 55vh;
+    right: 34vw;
+    transform: rotate(-40deg);
+}
+
+.scroll{
+    width: 100%;
+    height: 180%;
+    position: absolute;
+}
+
+.scroll-notes-text{
+    position: relative;
+    z-index: 3;
+    left: 5vw;
+    top: 12vh;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.text-white{
+    color:white;
+}
+
+.text-blue{
+    color:blue;
+}
+
+.text-red{
+    color:red;
+}
+
+
+
+.lock:hover, .arrow-right:hover, .arrow-left:hover, .arrow-bottom:hover, .scroll:hover, .scroll-questions:hover, .scroll-notes:hover{
+    cursor: pointer;
+}
