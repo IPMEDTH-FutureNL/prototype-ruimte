@@ -6,23 +6,19 @@
     height: 100vh;
 }
 
-
 .introText{
-
-
-    margin-left: 30%;
     background-color: black;
     color: #fff;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+    padding: 1rem; 
+    border-radius: 20px;
+    width: 50vw;
+    height: 50vh;
+    left: -17.5%;
+    transform: translate(50%, 50%);
 }
 
-.headerOne{
-
-}
 
 .btn-primary{
     padding-top: 10px;

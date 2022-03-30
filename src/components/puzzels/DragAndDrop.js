@@ -21,6 +21,8 @@ export class DragAndDrop extends Component {
 componentDidMount = () => {
   let hint = document.getElementById("hintButton");
   hint.style.display = "block";
+  let hideDiv = document.getElementById("infoPopUp");
+  hideDiv.style.display = "none";
 }
 
 
@@ -71,7 +73,9 @@ drop = (e) =>
 
       if(this.state.count === 3){
         let showPopUp = document.getElementById("Puzzel-voldaan");
+        let showDiv = document.getElementById("solutionDiv");
         showPopUp.style.display = "block";
+        showDiv.style.display = "block";
       }
   }
   else{
@@ -93,8 +97,8 @@ showButton(){
           </div>
 
 
-            <div className="infoPopUp" id="infoPopUp">
-                <div className="intro-kaartPuzzle">
+            <div className="hideSolution" id="infoPopUp">
+                <div className="introText">
                     <h1 className="headerOne">
                         Ik krijg het niet opgelost?
                     </h1>
@@ -129,8 +133,8 @@ showButton(){
             <img id="drag4"  data-div="div2" src={Selecteren} draggable="true" onDragStart={(event) => this.drag(event)}/>
           </div>
          
-          <div className="infoPopUp" id="Puzzel-voldaan">
-                <div className="intro-kaartPuzzle">
+          <div className="hideSolution" id="Puzzel-voldaan">
+                <div className="solutionDiv" id="solutionDiv">
                     <h1 className="headerOne-voldaan">
                         Goed gedaan, plak nu de coördinaten in de de witte balk!
                     </h1>

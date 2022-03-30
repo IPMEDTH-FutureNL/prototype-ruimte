@@ -47,7 +47,7 @@ export class OvergangPuzzelEen extends Component {
     return (
         <section className="puzzleOne">
             <div className="overlay" id="overlay">hiddentext</div>
-            <div className="startPopUp" id="startPopUp">
+            <div className="introText" id="startPopUp">
                 <div className="text">
                     <h1 className="headerOne">
                         Dang....

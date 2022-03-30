@@ -24,24 +24,8 @@
 }
 
 
-.startPopUp{
-    position: absolute;
-    background-color: lightgoldenrodyellow;
-    width: 500px;
-    height: 250px;
-    border-radius: 10px;
-    top: 250px;
-    left: 600px;
-    text-align: left !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
 
 .infoPopUp{
-    position: absolute;
     background-color: black;
     width: 500px;
     height: 400px;
@@ -56,6 +40,25 @@
     z-index: 999;
 }
 
+.solutionDiv{
+    background-color: black;
+    color: #fff;
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    text-align: left !important;
+    display: block;
+    margin-left: 30%;
+    z-index: 999;
+}
+
+.hideSolution{
+    display: block;
+    position: absolute;
+    z-index: 999;
+
+}
+
 .headerOne{
     margin-top: -15px;
 }
@@ -65,12 +68,9 @@
 }
 
 .intro-kaartPuzzle{
-    width: 90%;
-    padding-top: 2.5%;
-    margin-left: auto;
-    margin-right: auto;
-    z-index: 999;
     color: #fff;
+    padding-top: 20px; 
+    background-color: transparent;
 }
 
 .button{
@@ -99,22 +99,7 @@
     left: 200px;
 }
 
-.text-cloud{
-    position: absolute;
-    width: 800px;
-    bottom: 350px;
-    left: 300px;
-}
 
-.textCloud-innertext{
-    position: absolute;
-    width: 800px;
-    bottom: 580px;
-    left: 570px;
-    width: 300px;
-    text-align: center;
-    font-size: 20px;
-}
 
 
 .button-primary{
