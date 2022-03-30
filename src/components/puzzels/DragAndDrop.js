@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
 import '../../css/puzzleOne.css';
-import  LinksBoven  from '../../img/PuzzelStukjes/Linksboven.png'
-import  LinksOnder  from '../../img/PuzzelStukjes/Linksonder.png'
-import  Midden  from '../../img/PuzzelStukjes/Midden.png'
-import  Rechtsboven  from '../../img/PuzzelStukjes/Rechtsboven.png'
-import  Rechtsmidden  from '../../img/PuzzelStukjes/Rechtsmidden.png'
-import  Rechtsonder  from '../../img/PuzzelStukjes/Rechtsonder.png'
-import { FaInfoCircle } from "react-icons/fa";
+import  CTRLC  from '../../img/PuzzelStukjes/Controls/CTRLC.png'
+import  Muis  from '../../img/PuzzelStukjes/Controls/muis.png'
+import  CTRLV  from '../../img/PuzzelStukjes/Controls/CTRLV.png'
+import Selecteren from '../../img/PuzzelStukjes/Controls/selecteren.png'
+import robot from '../../img/robot.png'
+import oplossing from '../../img/PuzzelStukjes/Controls/oplossing.png'
+
+
 import { Link } from 'react-router-dom'
 
 export class DragAndDrop extends Component {
@@ -15,6 +16,13 @@ export class DragAndDrop extends Component {
     this.state = {
       count : 0,
     }
+}
+
+componentDidMount = () => {
+  let hint = document.getElementById("hintButton");
+  hint.style.display = "block";
+  let hideDiv = document.getElementById("infoPopUp");
+  hideDiv.style.display = "none";
 }
 
 
@@ -53,18 +61,21 @@ drag = (e) =>
 drop = (e) =>
 {
   e.preventDefault();
-        var image =e.dataTransfer.getData("content");
-  if (e.target.id == document.getElementById(image).getAttribute('data-div')){ 
+        var image = e.dataTransfer.getData("content");
+  if (e.target.id === document.getElementById(image).getAttribute('data-div')){ 
       alert("ok");          
       e.target.appendChild(document.getElementById(image));
       let changeOpacity = document.getElementById(e.target.id);
-      changeOpacity.style.opacity = "1";
+      changeOpacity.style.backgroundColor = "transparent";
+      changeOpacity.style.color = "transparent"
       this.setState({count : this.state.count + 1})
       console.log(this.state.count);
 
-      if(this.state.count === 5){
-        let showButton = document.getElementById("buttonOlifanten");
-        showButton.style.display = "block";
+      if(this.state.count === 3){
+        let showPopUp = document.getElementById("Puzzel-voldaan");
+        let showDiv = document.getElementById("solutionDiv");
+        showPopUp.style.display = "block";
+        showDiv.style.display = "block";
       }
   }
   else{
@@ -72,63 +83,72 @@ drop = (e) =>
   }
 }
 
+showButton(){
+  let showButton = document.getElementById("buttonGroup-voldaan");
+  showButton.style.display = "block";
+}
+
 
   render() {
     return (
       <section className="mapPuzzle">
-          <div className="hintButton" onClick={() => {this.openInfo()}}>
-            <FaInfoCircle className="buttonHint" />
+          <div className="hintButton" id="hintButton" onClick={() => {this.openInfo()}}>
+            <img className="robot-img-info" src={robot}/>
           </div>
 
 
-            <div className="infoPopUp" id="infoPopUp">
-                <div className="intro-kaartPuzzle">
+            <div className="hideSolution" id="infoPopUp">
+                <div className="introText">
                     <h1 className="headerOne">
-                        Ik krijg de kaart niet opgelost?
+                        Ik krijg het niet opgelost?
                     </h1>
-                    <p>Kijk goed naar de afbeeldingen op de stukken en zoek op de kaart de juiste plaatje.</p>
+                    <p>Zet de plaatjes in de volgorde van de afbeelding hieronder:</p>
+                    <img className="oplossing" src={oplossing}></img>
                     <div className="buttonGroup">
                         <button className="button" onClick={() => {this.hideInfo()}}>Ga verder</button>
                     </div>
               </div>
             </div>
 
-
-          <div className="overlay" id="overlay">hiddentext</div>
-            <div className="startPopUp" id="startPopUp">
-                <div className="intro-kaartPuzzle">
+            <div className="intro-kaartPuzzle">
                     <h1 className="headerOne">
-                        De kaart lig in stukken..
+                        Wat moet ik doen?
                     </h1>
-                    <p>Voordat we weten hoe we bij het olifanten verblijf komen, moeten we de stukje aan elkaar leggen.</p>
-                    <div className="buttonGroup">
-                        <button className="button" onClick={() => {this.hideOverLay()}}>Los op!</button>
-                    </div>
-              </div>
-          </div>
-
+                    <p>Voordat we weten hoe we de coördinaten in de computer moeten invullen moeten we eerste de juiste volgorde bepalen van onderstaande afbeeldingen.</p>
+                    <p>Je moet een stuk tekst kopiëren en plakken zet de plaatjes in de juiste volgorde!</p>
+                
+            </div>
           
           <div className="board">
-            <div><img src={LinksBoven} id="div1" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)} /></div>
-            <div><img src={Midden}  id="div2" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)} /></div>
-            <div><img src={Rechtsboven} id="div3" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}/></div>
-            <div><img src={LinksOnder} id="div4" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}/></div>
-            <div><img src={Rechtsmidden} id="div5" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}/></div>
-            <div><img src={Rechtsonder} id="div6" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}/></div>
+            <div id="div1" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}>1</div>
+            <div id="div2" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)} >2</div>
+            <div id="div3" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}>3</div>
+            <div id="div4" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}>4</div>
           </div>
 
           <div className="puzzelstukjes">
-            <img id="drag1" data-div="div1" src={LinksBoven} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag2" data-div="div4" src={LinksOnder} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag3"  data-div="div2" src={Midden} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag4"  data-div="div5" src={Rechtsmidden} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag5"  data-div="div3" src={Rechtsboven} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag6"  data-div="div6" src={Rechtsonder} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img id="drag1" data-div="div3" src={CTRLC} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img id="drag2" data-div="div4" src={CTRLV} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img id="drag3"  data-div="div1" src={Muis} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img id="drag4"  data-div="div2" src={Selecteren} draggable="true" onDragStart={(event) => this.drag(event)}/>
           </div>
          
-         <div className="buttonOlifanten" id="buttonOlifanten">
-           <Link to="/elephantEntry" className="secondary" >Ga naar het olifanten verblijf!</Link>
-         </div>
+
+          <div className="hideSolution" id="Puzzel-voldaan">
+                <div className="solutionDiv" id="solutionDiv">
+                    <h1 className="headerOne-voldaan">
+                        Goed gedaan, plak nu de coördinaten in de de witte balk!
+                    </h1>
+                    <p>Kopieer: </p>
+                    <p>RK 21u 21m 40s | Dec -16° 41′ 37″</p>
+
+                    <p>Plak deze hieronder:</p>
+                    <input className="inputGroup" onChange={() => this.showButton()}></input>
+                    <div className="buttonGroup-voldaan" id="buttonGroup-voldaan">
+                        <Link to="/overgangBurak" className="button-primary" >Zet koers naar Mars!</Link>
+                    </div>
+              </div>
+            </div>
       </section>
      
     )

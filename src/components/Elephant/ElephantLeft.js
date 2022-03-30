@@ -2,10 +2,12 @@ import React, {useState} from 'react'
 import Modal from 'react-modal';
 import ModalNotes from './ModalQuestions';
 import ModalQuestions from './ModalNotes';
-import elephantLeft from '../../img/elephantLeft.png'
+import ruimteschipLinks from '../../img/ruimteschipLinks.jpg'
 import arrowRight from '../../img/arrowRight.png'
-import closedScroll from '../../img/closedScroll.png'
+import tablet from '../../img/tablet.png'
 import { useNavigate } from "react-router-dom";
+//import { tab } from '@testing-library/user-event/dist/tab';
+
 
 const ElephantLeft = () => {
 
@@ -38,10 +40,10 @@ const ElephantLeft = () => {
 
   return (
     <div className="background">
-        <img className="elephant-right" src={elephantLeft}/>
+        <img className="elephant-right" src={ruimteschipLinks}/>
         <img className="arrow-right" src={arrowRight} onClick={goRight}/>
-        <img className="scroll-notes" src={closedScroll} onClick={scrollNotes}/>
-        <img className="scroll-questions" src={closedScroll} onClick={scrollQuestions}/>
+        <img className="scroll-notes" src={tablet} onClick={scrollNotes}/>
+        <img className="scroll-questions" src={tablet} onClick={scrollQuestions}/>
         <Modal className="modal-questions" isOpen={modalIsOpenQ}>
             <button onClick={scrollQuestionsFalse}>x</button>
             <ModalQuestions/>

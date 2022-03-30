@@ -1,32 +1,35 @@
 import React from 'react'
-import scroll from '../../img/scroll.png'
+import tablet from '../../img/tablet.png'
+
 
 const ModalQuestions = () => {
   return (
     <section>
-      <img className="scroll" src={scroll}/>
+
+      <img className="scroll" src={tablet}/>
       <section class="scroll-notes-text">
-        <h2 class="text-white">Het slot zit wel erg goed op slot he?</h2>
+        <h2 class="text-black">De code is wel erg lastig he?</h2>
 
-        <p class="text-white">1. Hoeveel olifanten zitten er in dit verblijf?</p>
+        <p class="text-black">1. Hoeveel planeten heeft ons zonnestelsel?</p>
 
-        <p class="text-blue">2. Hoe lang is een savanneolifant zwanger?</p>
+        <p class="text-blue">2. Welke planeet is het kleinste in ons zonnestelsel?</p>
         <ol class="text-blue">
-          <li>A. 6 maanden</li>
-          <li>B. 9 maanden</li>
-          <li>C. 15 maanden</li>
-          <li>D. 22 maanden</li>
+          <li>A. Mercurius </li>
+          <li>B. Venus </li>
+          <li>C. Aarde </li>
+          <li>D. Mars </li>
         </ol>
 
-        <p class="text-red">3. Hoeveel weegt een babyolifant?</p>
+        <p class="text-red">3. Welke planeet is het verst van de zon?</p>
         <ol class="text-red">
-          <li>A. 15-30 kilo</li>
-          <li>B. 45-75kg</li>
-          <li>C. 80-115 kilo</li>
-          <li>D. 125-160 kilo</li>
+          <li>A. Saturnus</li>
+          <li>B. Jupiter</li>
+          <li>C. Neptunus</li>
+          <li>D. Uranus</li>
         </ol>
 
-        <p class="text-white"> <em>Google is je beste vriend</em> </p>
+        <p class="text-black"> <em>Google is je beste vriend</em> </p>
+
       </section>
     </section>
   )

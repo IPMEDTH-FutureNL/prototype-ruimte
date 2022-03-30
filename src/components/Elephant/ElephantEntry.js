@@ -4,7 +4,8 @@ import ModalLock from './ModalLock';
 import '../../css/elephant.css';
 import { useNavigate } from "react-router-dom";
 
-import elephantEntry from '../../img/elephantEntry.png'
+
+import ruimteschipBegin from '../../img/ruimteschipBegin.jpg'
 import lock from '../../img/lock.png'
 import arrowRight from '../../img/arrowRight.png'
 import arrowLeft from '../../img/arrowLeft.png'
@@ -39,7 +40,7 @@ const ElephantEntry = () => {
   return (
     <section>
         <div className="background">
-            <img className="elephant-entry" src={elephantEntry}/>
+            <img className="elephant-entry" src={ruimteschipBegin}/>
             <img className="lock" onClick={setModalIsOpenToTrue} src={lock}/>
             <img className="arrow-right" src={arrowRight} onClick={goRight}/>
             <img className="arrow-left" src={arrowLeft} onClick={goLeft}/>
@@ -54,4 +55,5 @@ const ElephantEntry = () => {
   )
 }
 
-export default ElephantEntry
+export default ElephantEntry 
+

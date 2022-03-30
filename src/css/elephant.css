@@ -11,11 +11,12 @@ body{
 }
 
 .lock{
-    width: 10vw;
+    width: 5vw;
     position: relative;
     top: 50vh;
     left: 25vh;
 }
+
 .absolute{
     position: absolute;
 }
@@ -105,10 +106,10 @@ body{
 .modal-notes, .modal-questions{
     box-sizing: border-box;
     border-radius: 20px;
-    width: 50vw;
+    width: 40vw;
     height: 50vh;
     left: 50%;
-    transform: translate(50%);
+    transform: translate(75%, 0%);
 }
 
 .scroll-questions{
@@ -118,11 +119,13 @@ body{
     left: 40vw;
 }
 
+
 .scroll-notes{
-    width: 4vw;
+    width: 3vw;
     position: relative;
-    top: 70vh;
-    right: 43vw;
+    top: 55vh;
+    right: 34vw;
+    transform: rotate(-40deg);
 }
 
 .scroll{
@@ -134,8 +137,9 @@ body{
 .scroll-notes-text{
     position: relative;
     z-index: 3;
-    left: 10vw;
-    top: 15vh;
+    left: 5vw;
+    top: 12vh;
+
     font-size: 1.25rem;
     font-weight: bold;
 }
