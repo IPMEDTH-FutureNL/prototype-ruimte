@@ -6,7 +6,7 @@ const ModalQuestions = () => {
     <section>
       <img className="scroll" src={tablet}/>
       <section class="scroll-notes-text">
-        <h2 class="text-black">Het wachtwoord is wel erg lastig he?</h2>
+        <h2 class="text-black">De code is wel erg lastig he?</h2>
 
         <p class="text-black">1. Hoeveel planeten heeft ons zonnestelsel?</p>
 
@@ -26,7 +26,7 @@ const ModalQuestions = () => {
           <li>D. Uranus</li>
         </ol>
 
-        <p class="text-white"> <em>Google is je beste vriend</em> </p>
+        <p class="text-black"> <em>Google is je beste vriend</em> </p>
       </section>
     </section>
   )

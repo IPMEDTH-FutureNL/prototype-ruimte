@@ -8,7 +8,7 @@ const ElephantEnd = () => {
     const navigate = useNavigate(); 
 
     const wrong = () => {
-        alert('Dat is niet de juiste manier!')
+        alert('Dat is niet de juiste manier om een computer uit te schakelen!')
     }
 
     const right = () => {
@@ -19,7 +19,8 @@ const ElephantEnd = () => {
     <div className="background absolute">
         <img className="elephant-end" src={ruimteschipBegin}/>
         <section className="elephant-food">
-            <h2>Goed je hebt de gegevens, schakel nu de computer van het ruimteschip uit</h2>
+            <h2>Goed, je hebt de gegevens! </h2>
+            <h2>schakel nu de computer van het ruimteschip uit</h2>
             <ul className="elephant-food-list">
                 <li className="elephant-food-listitem" onClick={wrong}>Stekker eruit halen</li>
                 <li className="elephant-food-listitem" onClick={right}>Uit knop drukken</li>
