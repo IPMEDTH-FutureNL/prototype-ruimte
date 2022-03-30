@@ -6,6 +6,7 @@ import Intro from './components/gameplay/Intro';
 import Start from './components/gameplay/Start';
 import OvergangPuzzelEen from './components/gameplay/OvergangPuzzelEen';
 import DragAndDrop from './components/puzzels/DragAndDrop';
+import OverGangBurak from './components/gameplay/OverGangBurak';
 import Ending from './components/gameplay/Ending';
 import ElephantEntry from './components/Elephant/ElephantEntry';
 import ElephantEnd from './components/Elephant/ElephantEnd';
@@ -26,6 +27,7 @@ function App() {
           <Route path="/start" element={<Start></Start>} />
           <Route path='/firstPuzzle' element={<OvergangPuzzelEen />} />
           <Route path='/puzzleMap' element={ <DragAndDrop />} />
+          <Route path="/overgangBurak" element={<OverGangBurak />} />
           <Route path='/elephantEntry' element={ <ElephantEntry />} />
           <Route path='/elephantRight' element={ <ElephantRight />} />
           <Route path='/elephantLeft' element={ <ElephantLeft />} />

@@ -19,9 +19,9 @@ export class Intro extends Component {
       <div className="introEscape">
           <div className="introText">
               <h1 className="headerOne">
-                  Welkom bij de dierentuin escape!
+                  Welkom bij de ruimte escape!
               </h1>
-              <p>Los zo snel mogelijk de puzzels op om de meeste punten te behalen!</p>
+              <p>Tijdens deze escape wordt je meegenomen door het ruimteschip!</p>
               <button className='btn-primary' onClick={() => {this.startWithEscape()}}>Begin met de escape</button>
           </div>
 
