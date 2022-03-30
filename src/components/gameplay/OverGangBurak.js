@@ -28,7 +28,7 @@ export class OverGangBurak extends Component {
             this.setState({buttonText : "Ga naar motor kamer"});
             break;
           case 3:
-            window.location.href = "/end"
+            window.location.href = "/elephantEntry"
           
       }
       }

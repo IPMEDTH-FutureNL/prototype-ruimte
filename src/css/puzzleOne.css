@@ -47,8 +47,9 @@
     height: 400px;
     border-radius: 10px;
     text-align: left !important;
-    display: block;
-    margin-left: 30%;
+    display: none;
+    margin-left: 100%;
+    padding: 20px;
     z-index: 999;
 }
 

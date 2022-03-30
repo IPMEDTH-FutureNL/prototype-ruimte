@@ -1,7 +1,7 @@
 //intro
 import React, { Component } from 'react';
 import '../../css/oplosmatrixIntro.css';
-import zookeeperImage from '../../img/zookeeper.png'
+//import zookeeperImage from '../../img/zookeeper.png'
 import textCloud from '../../img/textCloud.png'
 
 export class OplosmatrixIntro extends Component{
@@ -30,7 +30,7 @@ export class OplosmatrixIntro extends Component{
             <section className='introDiv'>
                 <section className='intro'>
                     <div className='zookeeper-div'>
-                        <img className='zookeeper-img' src = {zookeeperImage}/>
+                        <img className='zookeeper-img'/>
                         <img className='text-cloud' src = {textCloud} />
                         <div className='textCloud-innertext'>
                             <p className='text'>{this.state.text}</p>
