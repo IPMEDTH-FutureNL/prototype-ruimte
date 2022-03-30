@@ -4,6 +4,7 @@ import ModalLock from './ModalLock';
 import '../../css/elephant.css';
 import { useNavigate } from "react-router-dom";
 
+
 import ruimteschipBegin from '../../img/ruimteschipBegin.jpg'
 import lock from '../../img/lock.png'
 import arrowRight from '../../img/arrowRight.png'
@@ -55,3 +56,4 @@ const ElephantEntry = () => {
 }
 
 export default ElephantEntry 
+

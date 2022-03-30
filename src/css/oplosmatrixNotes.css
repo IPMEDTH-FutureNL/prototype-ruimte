@@ -1,0 +1,24 @@
+.note{
+    background-image: url("../img/spaceships.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+    font-size: xx-large;
+}
+
+.note-center{
+    display: block;
+    margin: auto;
+    padding-top: 10%;
+    width: 25rem;
+    
+}
+
+
+.exitButton{
+    position: absolute;
+    right: 25px;
+    top:25px;
+}
+

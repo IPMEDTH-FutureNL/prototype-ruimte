@@ -1,0 +1,31 @@
+.oplosmatrix{
+    background-image: url('../img/951.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    height: 100vh;
+
+}
+
+.clickable-note{
+    width:50vw;
+    height: 30vh;
+    border: 5px solid red;
+    background-color: cyan;
+    opacity:50%;
+    position: absolute;
+    top:30vh;
+    right:28vw;
+}
+
+
+.clickable-lock{
+    width:15vw;
+    height:7vw;
+    border: 5px solid black;
+    background-color: chartreuse;
+    opacity:70%;
+    position: absolute;
+    top:59vh;
+    left:41vw;
+}

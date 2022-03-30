@@ -1,9 +1,11 @@
 import React from 'react'
 import tablet from '../../img/tablet.png'
 
+
 const ModalQuestions = () => {
   return (
     <section>
+
       <img className="scroll" src={tablet}/>
       <section class="scroll-notes-text">
         <h2 class="text-black">De code is wel erg lastig he?</h2>
@@ -27,6 +29,7 @@ const ModalQuestions = () => {
         </ol>
 
         <p class="text-black"> <em>Google is je beste vriend</em> </p>
+
       </section>
     </section>
   )
