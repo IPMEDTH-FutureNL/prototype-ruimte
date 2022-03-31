@@ -1,20 +1,21 @@
 import React, { Component } from 'react'
 import '../../css/puzzleOne.css';
 import  CTRLC  from '../../img/PuzzelStukjes/Controls/CTRLC.png'
-import  Muis  from '../../img/PuzzelStukjes/Controls/muis.png'
 import  CTRLV  from '../../img/PuzzelStukjes/Controls/CTRLV.png'
-import Selecteren from '../../img/PuzzelStukjes/Controls/selecteren.png'
+import  CTRLZ from '../../img/PuzzelStukjes/Controls/CTRLZ.png'
+import CTRLF from '../../img/PuzzelStukjes/Controls/CTRLF.png'
 import robot from '../../img/robot.png'
 import oplossing from '../../img/PuzzelStukjes/Controls/oplossing.png'
 
 
-import { Link } from 'react-router-dom'
+//import { Link } from 'react-router-dom'
 
 export class DragAndDrop extends Component {
   constructor(props){
     super(props);
     this.state = {
       count : 0,
+      buttonText : "Zet koers naar Mars",
     }
 }
 
@@ -62,8 +63,7 @@ drop = (e) =>
 {
   e.preventDefault();
         var image = e.dataTransfer.getData("content");
-  if (e.target.id === document.getElementById(image).getAttribute('data-div')){ 
-      alert("ok");          
+  if (e.target.id === document.getElementById(image).getAttribute('data-div')){         
       e.target.appendChild(document.getElementById(image));
       let changeOpacity = document.getElementById(e.target.id);
       changeOpacity.style.backgroundColor = "transparent";
@@ -79,7 +79,7 @@ drop = (e) =>
       }
   }
   else{
-     alert("wrong");
+     alert("Dat is helaas niet goed, probeer het nog een keer!");
   }
 }
 
@@ -87,6 +87,29 @@ showButton(){
   let showButton = document.getElementById("buttonGroup-voldaan");
   showButton.style.display = "block";
 }
+
+handleAnswer = (answerNumber) => {
+  let onjuist = document.getElementById("antwoordenGroep-onjuist");
+  let juist = document.getElementById("antwoordenGroep-juist");
+  let antwoordenGroepButton = document.getElementById("button-group-second");
+
+  if(answerNumber === 1){
+    this.setState({ textAnswers : "dit is de toets voor het vinden van tekst op een pagina."})
+    onjuist.style.display = "block";
+  }if(answerNumber === 2){
+    this.setState({ textAnswers : "dit is de toets om tekst te kopiëren."})
+    onjuist.style.display = "block";
+  }if(answerNumber === 3){
+    onjuist.style.display = "none";
+    juist.style.display = "block";
+    antwoordenGroepButton.style.display = "block";
+  }
+}
+
+handleClick = () => {
+  window.location.href = "/overgangBurak"
+}
+
 
 
   render() {
@@ -98,7 +121,7 @@ showButton(){
 
 
             <div className="hideSolution" id="infoPopUp">
-                <div className="introText">
+                <div>
                     <h1 className="headerOne">
                         Ik krijg het niet opgelost?
                     </h1>
@@ -115,38 +138,43 @@ showButton(){
                         Wat moet ik doen?
                     </h1>
                     <p>Voordat we weten hoe we de coördinaten in de computer moeten invullen moeten we eerste de juiste volgorde bepalen van onderstaande afbeeldingen.</p>
-                    <p>Je moet een stuk tekst kopiëren en plakken zet de plaatjes in de juiste volgorde!</p>
+                    <p>Sleep de juiste control toets naar het juiste roze vakje!</p>
                 
             </div>
           
           <div className="board">
-            <div id="div1" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}>1</div>
-            <div id="div2" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)} >2</div>
-            <div id="div3" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}>3</div>
-            <div id="div4" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}>4</div>
+            <div id="div1" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}>Zoeken</div>
+            <div id="div2" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)} >Ongedaan maken</div>
+            <div id="div3" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}>Kopiëren</div>
+            <div id="div4" className="div-board" onDrop={(event) => this.drop(event)} onDragOver={(event) => this.allowDrop(event)}>Plakken</div>
           </div>
 
           <div className="puzzelstukjes">
             <img id="drag1" data-div="div3" src={CTRLC} draggable="true" onDragStart={(event) => this.drag(event)}/>
             <img id="drag2" data-div="div4" src={CTRLV} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag3"  data-div="div1" src={Muis} draggable="true" onDragStart={(event) => this.drag(event)}/>
-            <img id="drag4"  data-div="div2" src={Selecteren} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img id="drag3"  data-div="div1" src={CTRLF} draggable="true" onDragStart={(event) => this.drag(event)}/>
+            <img id="drag4"  data-div="div2" src={CTRLZ} draggable="true" onDragStart={(event) => this.drag(event)}/>
           </div>
          
 
           <div className="hideSolution" id="Puzzel-voldaan">
                 <div className="solutionDiv" id="solutionDiv">
-                    <h1 className="headerOne-voldaan">
-                        Goed gedaan, plak nu de coördinaten in de de witte balk!
-                    </h1>
-                    <p>Kopieer: </p>
-                    <p>RK 21u 21m 40s | Dec -16° 41′ 37″</p>
-
-                    <p>Plak deze hieronder:</p>
-                    <input className="inputGroup" onChange={() => this.showButton()}></input>
-                    <div className="buttonGroup-voldaan" id="buttonGroup-voldaan">
-                        <Link to="/overgangBurak" className="button-primary" >Zet koers naar Mars!</Link>
-                    </div>
+  
+                <h1>Om naar Mars te komen moet de volgende vraag worden beantwoord.</h1>
+                <p>Welke control toets was de ongedaan maken toets?</p>
+                <div className="antwooordenGroep">
+                  <div className="antwoordenGroep-buttons">
+                    <button className="button-answer" onClick={() => this.handleAnswer(1)}>CTRL + F</button>
+                    <button className="button-answer" onClick={() => this.handleAnswer(2)}>CTRL + C</button>
+                    <button className="button-answer" onClick={() => this.handleAnswer(3)}>CTRL + Z</button>
+                  </div>
+                  <p className="antwoordenGroep-juist" id="antwoordenGroep-juist">Dat is goed! Dit is de toets waarmee je een actie kan terugdraaien</p>
+                  <p className="antwoordenGroep-onjuist" id="antwoordenGroep-onjuist">Helaas dat is niet goed {this.state.textAnswers}</p>
+                </div>
+                <div className="button-group-second" id="button-group-second">
+                  <button className="button-primary" onClick={() => this.handleClick()}>{this.state.buttonText}</button>
+                </div>
+     
               </div>
             </div>
       </section>

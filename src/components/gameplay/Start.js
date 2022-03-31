@@ -27,7 +27,7 @@ export class Start extends Component {
         break;
       case 2: 
         this.setState({text : "Laten we beginnen, we zetten koers naar Mars!"});
-        this.setState({buttonText : "Coördinaten invoeren"});
+        this.setState({buttonText : "Wachtwoord invoeren"});
         break;
       case 3:
         let coordinatesDiv = document.getElementById("coordinatesDiv");
@@ -49,10 +49,10 @@ export class Start extends Component {
     let antwoordenGroepButton = document.getElementById("button-group-second");
 
     if(answerNumber === 1){
-      this.setState({ textAnswers : "dit zijn coördinaten voor planeten"})
+      this.setState({ textAnswers : "dit is wel een sterk wachtwoord omdat moeilijk te raden is."})
       onjuist.style.display = "block";
     }if(answerNumber === 2){
-      this.setState({ textAnswers : "dit zijn coördinaten voor plaatsen"})
+      this.setState({ textAnswers : "dit is wel een sterk wachtwoord omdat moeilijk te raden is."})
       onjuist.style.display = "block";
     }if(answerNumber === 3){
       onjuist.style.display = "none";
@@ -93,15 +93,15 @@ export class Start extends Component {
           </div>
 
           <div className="coordinatesDiv" id="coordinatesDiv">
-              <h1>Om naar Mars te komen moeten er coördinaten worden ingevuld.</h1>
-              <p>Welke van de drie antwoorden is <b>GEEN</b> voorbeeld van een coördinaat.</p>
+              <h1>Om naar Mars te komen moeten we het wachtwoord van de computer in typen</h1>
+              <p>Welke van de drie antwoorden is <b>GEEN</b> voorbeeld van een goed wachtwoord.</p>
               <div className="antwooordenGroep">
                 <div className="antwoordenGroep-buttons">
-                  <button className="button-answer" onClick={() => this.handleAnswer(1)}>RK 21u 21m 40s | Dec -16° 41′ 37″</button>
-                  <button className="button-answer" onClick={() => this.handleAnswer(2)}>52.0115769, 4.3570677</button>
-                  <button className="button-answer" onClick={() => this.handleAnswer(3)}>2286 KG</button>
+                  <button className="button-answer" onClick={() => this.handleAnswer(1)}>KP@19!Tech</button>
+                  <button className="button-answer" onClick={() => this.handleAnswer(2)}>Techsh@rks!45</button>
+                  <button className="button-answer" onClick={() => this.handleAnswer(3)}>Welkom!</button>
                 </div>
-                <p className="antwoordenGroep-juist" id="antwoordenGroep-juist">Dat is goed! Dit is een postcode, zo kan er post naar je huis worden verzonden!</p>
+                <p className="antwoordenGroep-juist" id="antwoordenGroep-juist">Dat is goed! Dit is geen sterk wachtwoord en kan zo worden geraden!</p>
                 <p className="antwoordenGroep-onjuist" id="antwoordenGroep-onjuist">Helaas dat is niet goed {this.state.textAnswers}</p>
               </div>
               <div className="button-group-second" id="button-group-second">
@@ -117,7 +117,7 @@ export class Start extends Component {
                     <h1 className="headerOne">
                         Help, ik kom er niet uit!
                     </h1>
-                    <p>Klik eens op de button met de tekst 2286 KG!</p>
+                    <p>Klik eens op de button met de tekst Welkom!</p>
                     <div className="buttonGroup">
                         <button className="button" onClick={() => {this.hideInfo()}}>Ga verder met puzzel</button>
                     </div>

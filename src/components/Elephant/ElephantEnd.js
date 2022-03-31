@@ -15,7 +15,7 @@ const ElephantEnd = () => {
     }
 
     const right = () => {
-        navigate("/oplosmatrixIntro") 
+        navigate("/oplosmatrix") 
 
     }
 
